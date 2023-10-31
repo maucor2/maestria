@@ -1,5 +1,3 @@
-
-
 ## A
 ##Definir un numero primo
 def es_primo(n):
@@ -14,26 +12,6 @@ def es_primo(n):
     # Comprobamos si es divisible entre cualquier entero impar entre 3 y sqrt(n)
     return not any(n % i == 0 for i in range(3, int(n**0.5) + 1, 2))
 
-##B
-# funcion de productos 
-def m(n): 
-    producto = 1
-    while (n != 0): 
-        producto = producto * (n % 10) 
-        n = n // 10
-    return producto
-
-##C
-#revierte los caracteres 
-def r(val):
-    rev = ''
-    rev = (str(val)[::-1])
-    return rev 
-
-## variable globales        
-    
-list_primos =[]
-sheldon_list = []
 
 # esta funcion revisa si en el orden de la lista la multiplicacion entre los digitos es igual a la posicion de la lista
 def lista_primo (num):
@@ -56,13 +34,8 @@ def lista_primo (num):
                  print(sum_primos)
             else:
                 break
-           
-                
-        
-      
+
     print(list_primos)
 
 
-
-
-lista_primo (1000)
+lista_primo (1000)## cantidad de numeros primos a evaluar
