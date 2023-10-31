@@ -1,5 +1,5 @@
-from time import sleep
-from progress.spinner import MoonSpinner
+##from time import sleep
+##from progress.spinner import MoonSpinner
 
 ## A
 ##Definir un numero primo
@@ -38,7 +38,7 @@ sheldon_list = []
 
 # esta funcion revisa si en el orden de la lista la multiplicacion entre los digitos es igual a la posicion de la lista
 def lista_primo (num):
-    with MoonSpinner('Revisando primos…') as bar:
+    #with MoonSpinner('Revisando primos…') as bar:
         
         pos_lista_primo = 0 #variable de conteo
         primo = 1 #valor evaluado
@@ -59,7 +59,7 @@ def lista_primo (num):
                     sheldon_list.append([pos_lista_primo, primo, multi_digi, v])
                 list_primos.append([pos_lista_primo, primo, multi_digi, v])
                 #sleep(0.15)
-                bar.next()
+                #bar.next()
                 #print(c, val, m_p, v)
         #print(sheldon_list)
         
@@ -87,4 +87,4 @@ else:
     x = int(x)
 
 lista_primo (x)
-k=input("Presione una tecla para cerrar") 
+#k=input("Presione una tecla para cerrar") 
