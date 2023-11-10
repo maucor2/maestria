@@ -1,6 +1,6 @@
 ##from time import sleep
 ##from progress.spinner import MoonSpinner
-
+import sys
 ## A
 ##Definir un numero primo
 def es_primo(n):
@@ -60,7 +60,10 @@ def lista_primo (num):
                 list_primos.append([pos_lista_primo, primo, multi_digi, v])
                 #sleep(0.15)
                 #bar.next()
-                #print(c, val, m_p, v)
+                #print(pos_lista_primo, primo, multi_digi, v)
+                progress = pos_lista_primo/num*100
+                sys.stdout.write("Progrso de análisis: %d%%   \r" % (progress) )
+                sys.stdout.flush()
         #print(sheldon_list)
         
 
@@ -79,7 +82,7 @@ def lista_primo (num):
         
 
 
-print("Sheldon Cooper, cree que el 73 es el mejor numero \ndice que es el primo numero 21 y el inverso de 21\nosea 12, es 37 el inverso de 73, quiere probar la\nteoría de sheldon? ingrese cuantos números primos \nquiere revisar: (si deja el espacio vacio se \nrevisaran 1.000.000 números primos)")
+print("Sheldon Cooper, cree que el 73 es el mejor número, \ndice que es el primo número 21 y el inverso de 21\nosea 12, es 37 el inverso de 73, quiere probar la\nteoría de sheldon? ingrese cuantos números primos \nquiere revisar: (si deja el espacio vacio se\nrevisaran 1.000.000 números primos, este proceso\n puede tomar varios minutos)")
 x = input()
 if x == '':
     x=1000000
@@ -87,4 +90,5 @@ else:
     x = int(x)
 
 lista_primo (x)
-#k=input("Presione una tecla para cerrar") 
+k=input("Presione una tecla para cerrar") 
+
